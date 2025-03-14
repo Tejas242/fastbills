@@ -1,50 +1,153 @@
-# Welcome to your Expo app 👋
+<div align="center">
+  <h1>FastBills</h1>
+  <p><strong>Supermarket Billing System</strong></p>
+  <p>
+    <img src="https://img.shields.io/badge/Platform-iOS%20%7C%20Android-blue" alt="Platform iOS | Android">
+    <img src="https://img.shields.io/badge/Made%20with-Expo%20%7C%20React%20Native-61dafb.svg" alt="Made with Expo and React Native">
+    <img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License MIT">
+  </p>
+</div>
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## 📱 Overview
 
-## Get started
+FastBills is a comprehensive point of sale and inventory management solution built for modern supermarkets and retail stores. Built with React Native and Expo, this mobile application streamlines the billing process, inventory management, and provides detailed business analytics.
 
-1. Install dependencies
+## ✨ Features
 
+### 🛒 Product Management
+- **Browse Products**: Intuitive catalog with category filtering and search
+- **Barcode Scanning**: Quickly find products using device camera
+- **Inventory Tracking**: Auto-updating stock levels with low stock alerts
+- **Product Images**: Visual identification of products in catalog
+
+### 🧾 Billing Operations
+- **Smart Cart**: Real-time total calculation with tax estimation
+- **Price Overrides**: Manager-authorized price modifications
+- **Multiple Payment Methods**: Support for cash, card, and UPI payments
+- **Change Calculation**: Automatic computing of change for cash payments
+
+### 👥 Customer Management
+- **Customer Details**: Save customer information for receipts
+- **Loyalty Integration**: Ready for loyalty program implementation
+- **Digital Receipts**: Share receipts via multiple channels
+
+### 💼 Business Operations
+- **Void Transactions**: Manager-approved void process with reason tracking
+- **Returns & Refunds**: Process returns with reference to original transaction
+- **Sales Reports**: Analyze sales by time period or category
+- **Cash Register**: Track cash flow with opening/closing balances
+
+### 🎨 User Experience
+- **Role-Based Access**: Different permissions for cashiers vs managers
+- **Dark Mode**: Full dark mode support for reduced eye strain
+- **Responsive Design**: Works on various screen sizes and orientations
+- **PDF Receipts**: Generate professional PDF receipts for printing or sharing
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Node.js 18 or higher
+- Expo CLI (`npm install -g expo-cli`)
+- Expo Go app for testing on physical devices
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/fastbills.git
+   cd fastbills
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+4. Open on your device:
+   - Scan the QR code with Expo Go (Android) or Camera app (iOS)
+   - Or press 'a' for Android emulator / 'i' for iOS simulator
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Demo Credentials
+- **Cashier Role:** username: `cashier`, password: `password`
+- **Manager Role:** username: `manager`, password: `password123`
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 📂 Project Structure
 
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+```
+fastbills/
+├── app/                  # Expo Router app directory
+│   ├── (tabs)/           # Tab-based screens
+│   ├── bill/             # Bill detail screens
+│   └── checkout/         # Checkout flow screens
+├── assets/               # Static assets
+├── components/           # Reusable UI components
+│   ├── ui/               # Basic UI elements
+│   └── themed/           # Theme-aware components
+├── constants/            # App constants and configuration
+├── context/              # React Context providers
+├── data/                 # Sample data and mocks
+├── hooks/                # Custom React hooks
+├── types/                # TypeScript type definitions
+└── utils/                # Utility functions
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 📱 Application Screens
 
-## Learn more
+### Main Tabs
+- **Products**: Browse available products with category filtering
+- **Cart**: View current cart items and proceed to checkout
+- **History**: Access past transactions and receipts
+- **Settings**: User preferences and application settings
 
-To learn more about developing your project with Expo, look at the following resources:
+### Additional Screens
+- **Checkout Flow**: Multi-step checkout process
+- **Bill Details**: Detailed view of transaction with sharing options
+- **Inventory Management**: Stock level adjustments and monitoring
+- **Reports**: Sales and inventory analytics
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🔧 Technical Implementation
 
-## Join the community
+### Core Technologies
+- **React Native**: Cross-platform mobile framework
+- **Expo**: Development toolchain and runtime
+- **TypeScript**: Type safety throughout the application
+- **expo-router**: File-based navigation system
 
-Join our community of developers creating universal apps.
+### State Management
+- **Context API**: App-wide state management
+- **AsyncStorage**: Persistent local storage solution
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### UI Components
+- **Custom Themed Components**: Consistent styling with dark mode support
+- **Expo Symbols**: Modern icon system
+- **Reusable UI Library**: Composable component system
+
+### Device Features
+- **Camera**: Barcode scanning capabilities
+- **Sharing**: PDF and text receipt sharing
+- **Print**: Receipt printing preparation
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 🙏 Acknowledgments
+
+- [Expo Team](https://expo.dev/) for the amazing development platform
+- [React Native Community](https://reactnative.dev/) for the robust framework
+- Icons made by various artists from [Expo Symbols](https://symbols.expo.fyi/)
